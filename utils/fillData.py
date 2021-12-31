@@ -1,9 +1,11 @@
 import pandas as pd
 import time
 
-def getFirstToken(string, char):
-    t = string.index(char,0)
-    return string[0:t]
+def getFirstToken(string, _char):
+    if (_char in string):
+        t = string.index(_char,0)
+        return string[0:t]
+    return string
 
 def searchByToken(df, token):
     i = 0
